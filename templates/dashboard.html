@@ -1,0 +1,47 @@
+{% from "bootstrap5/table.html" import render_form %}
+{% block content %}
+{% include "header.html" %}
+
+<main class="mb-4">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Website Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Password</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for password in passwords %}
+            <tr>
+              <td scope="row">{{ password.id }}</td>
+              <td>{{ password.website_name }}</td>
+              <td>{{ password.email }}</td>
+              <td>
+                <a href="{{url_for('copy_password', password_id=password.id) }}">{{ password.website_password }}</a>
+              </td>
+              <td>
+                <a href="{{url_for('delete_password', password_id=password.id) }}" class="btn btn-danger">Delete</a>
+              </td>
+              <td>
+                <a href="{{url_for('edit_password', password_id=password.id) }}" class="btn btn-dark">Edit</a>
+              </td>
+
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+{% include "footer.html" %}
+{% endblock %}
