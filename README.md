@@ -30,13 +30,13 @@ pip install -r requirements.txt
 
 ## Technologies Used:
 
-  Flask
-  Flask-SQLAlchemy
-  Flask-Login
-  Flask-WTF
-  Bootstrap5
-  Werkzeug
-  Pyperclip
+- Flask
+- Flask-SQLAlchemy
+- Flask-Login
+- Flask-WTF
+- Bootstrap5
+- Werkzeug
+- Pyperclip
 
 ## Database
 
