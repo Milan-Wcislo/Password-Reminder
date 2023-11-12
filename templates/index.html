@@ -1,4 +1,25 @@
 {%  block content %}
 {% include "header.html" %}
+
+<header id="home">
+    <div class="layout-wrap" style="background-image: url(../static/assets/img/layout_1920.jpg)">
+        <div class="container-fluid px-lg-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4">Password Reminder</h1>
+                    <p class="lead">
+                        Never Forget Your Passwords Again with Our One To Many Password Reminder.
+                        The Simple and Secure Application that Will Help You Keep Track of Your Passwords.
+                    </p>
+                </div>
+                <div class="col-lg-6 align-self-end btn-box">
+                    <a href="{{ url_for('login') }}" class="btn btn-primary mr-2">Login</a>
+                    <a href="{{ url_for('register') }}" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 {% include "footer.html" %}
 {% endblock %}

@@ -8,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Password Manager</title>
+    <title>One To Many</title>
     {% block styles %}
     <!-- Load Bootstrap-Flask CSS here -->
     {{ bootstrap.load_css() }}
@@ -21,9 +21,9 @@
   </head>
   <body>
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light background-light" id="mainNav">
       <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="/">Password Manager</a>
+        <a class="navbar-brand" href="/">One To Many</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,6 +38,37 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto py-4 py-lg-0">
+            {% if not current_user.is_authenticated %}
+            <li class="nav-item">
+              <a
+                class="nav-link px-lg-3"
+                href="{{ url_for('login') }}"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link px-lg-3"
+                href="{{ url_for('register') }}"
+                >Register</a
+              >
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a
+                class="nav-link px-lg-3"
+                href="{{ url_for('dashboard') }}"
+                >Dashboard</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link px-lg-3"
+                href="{{ url_for('logout') }}"
+                >Log Out</a
+              >
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>

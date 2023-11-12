@@ -1,0 +1,42 @@
+{% from "bootstrap5/form.html" import render_form %}
+{% block content %}
+{% include "header.html" %}
+
+<main class="wrap">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-6 col-md-10 mx-auto">
+        <div class="card">
+            <div class="card-body">
+            <!-- Titles -->
+            {% if is_register: %}
+                <h2 class="card-title text-center">Register</h2>
+            {% elif is_login: %}
+                <h2 class="card-title text-center">Login</h2>
+            {% elif is_add_password: %}
+                <h2 class="card-title text-center">Add New Password</h2>
+            {% else %}
+                <h2 class="card-title text-center">Edit Password</h2>
+            {% endif %}
+                <hr>
+            <!-- Flash messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages %}
+                    <div class="alert alert-danger w-100 alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                  {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <!-- Form Render -->
+            {{ render_form(form) }}
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% include "footer.html" %} {% endblock %}

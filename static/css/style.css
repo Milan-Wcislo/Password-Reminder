@@ -1,0 +1,124 @@
+:root {
+  --beige1: #F8F0E5;
+  --beige2: #EADBC8;
+  --beige3: #DAC0A3;
+  --navy: #102C57;
+}
+
+.btn-primary {
+    background-color: var(--navy);
+    border: none;
+}
+
+html,
+.wrap {
+    background-color: var(--beige1);
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-wrap {
+    background-color: var(--beige1);
+    padding: 10vh 0;
+}
+
+nav {
+    background-color: var(--beige2);
+}
+
+nav .navbar-brand {
+    font-size: 1.5rem;
+}
+
+nav .nav-link {
+    font-size: 1.2rem;
+}
+
+main {
+    min-height: 100vh;
+}
+
+#home .layout-wrap {
+    overflow: hidden;
+    height: 100vh;
+    background-position: bottom center;
+}
+
+#home .row {
+    height: 100vh;
+}
+
+#home h1,
+#home .lead {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+
+#home h1 {
+    margin-top: 12vh;
+    padding: 15px 0;
+}
+
+#home .lead {
+    margin-top: 3vh;
+    padding: 10px 20px;
+}
+
+#home h1::after,
+#home .lead::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--beige3);
+    z-index: -1;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+#home .btn-box {
+    display: flex;
+    padding: 10%;
+    justify-content: center;
+}
+
+.btn-box .btn {
+    font-size: 2.4rem;
+    padding: 10px 40px;
+    margin: 0 10px;
+}
+
+.card-body {
+    background-color: var(--beige2);
+}
+
+.table-striped>thead>tr>th {
+    background-color: var(--beige3);
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.table-striped td {
+    vertical-align: middle;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td {
+   background-color: var(--beige1);
+}
+
+.table-striped>tbody>tr:nth-child(even)>td {
+    background-color: var(--beige2);
+}
+
+.table-striped .password {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+

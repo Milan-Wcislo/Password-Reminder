@@ -21,12 +21,18 @@ class AddPassword(FlaskForm):
     website_name = StringField('Website Name', validators=[DataRequired()])
     email = EmailField('Email', validators=[DataRequired()])
     website_password = PasswordField('Website Password', validators=[DataRequired()])
+    website_password_hint = StringField('Add Password Hint (Optional)')
     submit = SubmitField('Add Password')
 
 
 class EditPassword(FlaskForm):
     website_name = StringField('Website Name', validators=[DataRequired()])
     email = EmailField('Email', validators=[DataRequired()])
-    old_website_password = StringField('Old Website Password', validators=[DataRequired()], render_kw={'disabled': True})
     website_password = PasswordField('New Website Password', validators=[DataRequired()])
+    website_password_hint = StringField('Add Password Hint (Optional)')
     submit = SubmitField('Edit Password')
+
+
+class SearchForm(FlaskForm):
+    search = StringField('Search For Valid Passwords', validators=[DataRequired()], render_kw={"placeholder": "Search for passwords"})
+    submit = SubmitField('Search')
