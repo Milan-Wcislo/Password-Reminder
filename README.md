@@ -7,15 +7,15 @@ This is a simple Secure Password Reminder web application built with `Flask`, `S
 1. Make sure you have [Python](https://pages.github.com/](https://www.python.org/downloads/). installed.
   
 2. Clone the repository:
-```bash
+```console
 git clone https://github.com/your-username/secure-password-manager.git
 ```
 3. Navigate to the project directory:
-```bash
+```console
 cd Password-Reminder
 ```
 4. Install the required dependencies:
-```bash
+```console
 pip install -r requirements.txt
 ```
 
