@@ -8,7 +8,7 @@ This is a simple Secure Password Reminder web application built with `Flask`, `S
   
 2. Clone the repository:
 ```console
-git clone https://github.com/your-username/secure-password-manager.git
+git clone https://github.com/Milan-Wcislo/Password-Reminder.git
 ```
 3. Navigate to the project directory:
 ```console
