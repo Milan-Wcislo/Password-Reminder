@@ -46,9 +46,3 @@ Security Passwords are securely hashed using the `PBKDF2` algorithm. This ensure
 ## Contributing
 
 If you would like to contribute to this project, feel free to open an issue or create a pull request. 
-
-## License
-
-This project is licensed under the `MIT License` - see the LICENSE file for details.
-  
-
